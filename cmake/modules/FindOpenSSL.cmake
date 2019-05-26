@@ -8,18 +8,18 @@ endif ()
 if (WIN32)
     if(CMAKE_SIZEOF_VOID_P EQUAL 8)
         # 64bit
-        set(LIB_PATH ${CMAKE_SOURCE_DIR}/../rparser-lib/prebuilt/x64-MT)
+        set(LIB_PATH ${CMAKE_CURRENT_LIST_DIR}/../../prebuilt/x64-MT)
     else ()
         # 32bit
-        set(LIB_PATH ${CMAKE_SOURCE_DIR}/../rparser-lib/prebuilt/x86-MT)
+        set(LIB_PATH ${CMAKE_CURRENT_LIST_DIR}/../../prebuilt/x86-MT)
     endif ()
 else ()
-    set(LIB_PATH ${CMAKE_SOURCE_DIR}/../rparser-lib/prebuilt/linux-x86)
+    set(LIB_PATH ${CMAKE_CURRENT_LIST_DIR}/../../prebuilt/linux-x86)
 endif ()
 
 FIND_PATH(OPENSSL_INCLUDE_DIR openssl/opensslv.h
     HINTS
-    ${CMAKE_SOURCE_DIR}/../rparser-lib/include
+    ${CMAKE_CURRENT_LIST_DIR}/../../include
     PATHS
     /usr/local/include
     /usr/include
