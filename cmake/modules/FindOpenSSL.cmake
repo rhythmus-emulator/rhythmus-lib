@@ -26,7 +26,7 @@ FIND_PATH(OPENSSL_INCLUDE_DIR openssl/opensslv.h
 )
 
 FIND_LIBRARY(OPENSSL_SSL_LIBRARY
-    NAMES libsslMD sslMD libssl ssl
+    NAMES libsslMT sslMT libssl ssl
     HINTS
     ${LIB_PATH}
     PATHS
@@ -35,7 +35,7 @@ FIND_LIBRARY(OPENSSL_SSL_LIBRARY
 )
 
 FIND_LIBRARY(OPENSSL_CRYPTO_LIBRARY
-    NAMES libcryptoMD cryptoMD libcrypto crypto
+    NAMES libcryptoMT cryptoMT libcrypto crypto
     HINTS
     ${LIB_PATH}
     PATHS
