@@ -1,10 +1,5 @@
 # Should work well only in MSVC
 
-if (UNIX)
-    find_package(ZLIB ONLY_CMAKE_FIND_ROOT_PATH)
-    return ()
-endif ()
-
 if (WIN32)
     if(CMAKE_SIZEOF_VOID_P EQUAL 8)
         # 64bit
