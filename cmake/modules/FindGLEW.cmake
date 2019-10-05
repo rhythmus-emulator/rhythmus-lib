@@ -23,7 +23,7 @@ FIND_PATH(GLEW_INCLUDE_DIR GL/glew.h
 # find static version first
 FIND_LIBRARY(GLEW_LIBRARY
     NAMES libglews libglew libglew32s libglew32 glew32s glew32
-    HINTS
+    HINTS ${LIB_PATH}
     PATHS
     /usr/local/lib
     /usr/lib
